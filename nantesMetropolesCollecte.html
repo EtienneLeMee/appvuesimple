@@ -10,15 +10,26 @@
     </head>
     <body>
         <div id="app">
-        <header class="d-flex justify-content-center py-3">
-            <ul class="nav nav-pills">
-              <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            </ul>
-          </header>
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <template v-for="dechet in dechets">
+                        <li class="nav-item"><button class="nav-link active" aria-current="page">{{ dechet }}</button></li>
+                    </template>
+              <!--li class="nav-item"><button href="#" class="nav-link active" aria-current="page">Verre</button></li>
+              <li class="nav-item"><button href="#" class="nav-link">Features</button></li>
+              <li class="nav-item"><button href="#" class="nav-link">Pricing</button></li>
+              <li class="nav-item"><button href="#" class="nav-link">FAQs</button></li>
+              <li class="nav-item"><button href="#" class="nav-link">About</button></li-->
+                </ul>
+            </header>
+            <main>
+                <ul>
+                    <li v-for="record in commits">
+                        {{record}}
+                    </li>
+                </ul>
+            </main>
+          
 
 
         </div>
@@ -34,7 +45,7 @@
 			Vue.createApp({
 				data() {
 					return {
-						branches: ["main", "dev"],
+						dechets: ["Verre", "dev"],
 						currentBranch: "main",
 						commits: null,
 					};
