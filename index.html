@@ -1,111 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=chrome">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nantes Métropole collecte ordures</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <style>
-            .TextCenter {
-				text-align: center;
-			}
-        </style>
-    </head>
-    <body>
-        <div id="app">
-            <header class="d-flex justify-content-center py-3">
-                <ul class="nav nav-pills">
-                    <template v-for="dechet in dechets">
-                        <li class="nav-item"><button class="nav-link" v-bind:class="{ 'active': currentType == dechet.name}" v-on:click="makeActive()" aria-current="page">{{ dechet.name }}</button></li>
-                    </template>
-              <!--li class="nav-item"><button href="#" class="nav-link active" aria-current="page">Verre</button></li>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nantes Métropole collecte ordures</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <style>
+    .TextCenter {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <template v-for="dechet in dechets">
+          <li class="nav-item">
+            <button class="nav-link" v-bind:class="{ 'active': currentType === dechet.name}"
+              v-on:click="makeActive(dechet.name)" aria-current="page">
+              {{ dechet.name }}
+            </button>
+          </li>
+        </template>
+        <!--li class="nav-item"><button href="#" class="nav-link active" aria-current="page">Verre</button></li>
               <li class="nav-item"><button href="#" class="nav-link">Features</button></li>
               <li class="nav-item"><button href="#" class="nav-link">Pricing</button></li>
               <li class="nav-item"><button href="#" class="nav-link">FAQs</button></li>
               <li class="nav-item"><button href="#" class="nav-link">About</button></li-->
-                </ul>
-            </header>
-            <main>
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="TextCenter">Commune</th>
-                        <th scope="col" class="TextCenter">Nombre de points de collecte</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr v-for="lieu in lieuxParType">
-                        <td class="TextCenter">{{lieu.name}}</td>
-                        <td class="TextCenter">{{lieu.count}}</td>
-                      </tr>
-                    </tbody>
-                  </table>         
-            </main>
-          
+      </ul>
+    </header>
+    <main>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="TextCenter">Commune</th>
+            <th scope="col" class="TextCenter">
+              Nombre de points de collecte
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="lieu in lieuxParType">
+            <td class="TextCenter">{{lieu.name}}</td>
+            <td class="TextCenter">{{lieu.count}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script>
+    const apiURLDechets =
+      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&rows=10&facet=type_dechet&facet=commune&facet=pole";
+    const apiURLType =
+      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&rows=10&facet=type_dechet&facet=commune&facet=pole&refine.type_dechet=";
+    const config = {};
 
+    Vue.createApp({
+      data() {
+        return {
+          dechets: null,
+          currentType: "Tri'Sac", //"Tri%27Sac", //Ordure+m%C3%A9nag%C3%A8re, D%C3%A9chet+recyclable, Verre, Papier-carton
+          lieuxParType: null,
+        };
+      },
 
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<script src="https://unpkg.com/vue@3"></script>
-		<script>
-			const apiURLDechets = "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&rows=10&facet=type_dechet&facet=commune&facet=pole";
-			const apiURLType = "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&rows=10&facet=type_dechet&facet=commune&facet=pole&refine.type_dechet="
-            const config = {
-			};
+      created: function () {
+        this.startFetchDataAsync();
+      },
 
-			Vue.createApp({
-				data() {
-					return {
-						dechets: null,
-						currentType: "Tri%27Sac", //Ordure+m%C3%A9nag%C3%A8re, D%C3%A9chet+recyclable, Verre, Papier-carton
-						lieuxParType: null,
-					};
-				},
+      watch: {
+        currentType: "fetchDataAsync",
+      },
 
-				created: function () {
-					this.startFetchDataAsync();
-				},
+      methods: {
+        fetchDataAsync: async function () {
+          try {
+            const responseType = await axios.get(
+              apiURLType + this.currentType,
+              config
+            );
+            console.log(responseType.data);
+            this.lieuxParType = responseType.data.facet_groups[1].facets;
+            // console.log(self.commits[0].html_url);
+          } catch (error) {
+            console.log(error);
+          }
+        },
+        startFetchDataAsync: async function () {
+          try {
+            const responseDechets = await axios.get(apiURLDechets, config);
+            const responseType = await axios.get(apiURLType + this.currentType, config);
+            console.log(responseType.data);
+            this.dechets = responseDechets.data.facet_groups[0].facets;
+            this.lieuxParType = responseType.data.facet_groups[1].facets;
+            // console.log(self.commits[0].html_url);
+          } catch (error) {
+            console.log(error);
+          }
+        },
+        makeActive: function (name) {
+          this.currentType = name;
+        },
+        formattedMessage: function (message) {
+          const newline = message.indexOf("\n");
+          return newline > 0 ? message.slice(0, newline) : message;
+        },
+        formattedDate: function (date) {
+          return date.replace(/T|Z/g, " ");
+        },
+      },
+    }).mount("#app");
+  </script>
+</body>
 
-				watch: {
-					currentBranch: "fetchDataAsync",
-				},
-				methods: {
-                    fetchDataAsync: async function () {
-						try {                          
-                            const responseType = await axios.get(apiURLType + this.currentType, config)
-                            console.log(responseType.data)
-                            this.lieuxParType = responseType.data.facet_groups[1].facets
-                            // console.log(self.commits[0].html_url);
-						} catch(error) {
-					    	console.log(error);
-					  	}
-					},
-					startFetchDataAsync: async function () {
-						try {
-                            const responseDechets = await axios.get(apiURLDechets, config)
-                            const responseType = await axios.get(apiURLType + this.currentType, config)
-                            console.log(responseType.data)
-                            this.dechets = responseDechets.data.facet_groups[0].facets
-                            this.lieuxParType = responseType.data.facet_groups[1].facets
-                            // console.log(self.commits[0].html_url);
-						} catch(error) {
-					    	console.log(error);
-					  	}
-					},
-                    makeActive: function(){
-                        
-                    },
-					formattedMessage: function (message) {
-						const newline = message.indexOf("\n");
-						return newline > 0 ? message.slice(0, newline) : message;
-					},
-					formattedDate: function (date) {
-						return date.replace(/T|Z/g, " ");
-					},
-				},
-			}).mount("#app");
-		</script>
-    </body>
 </html>
