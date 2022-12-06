@@ -13,7 +13,7 @@
             <header class="d-flex justify-content-center py-3">
                 <ul class="nav nav-pills">
                     <template v-for="dechet in dechets">
-                        <li class="nav-item"><button class="nav-link active" v-on:click="makeActive()" aria-current="page">{{ dechet }}</button></li>
+                        <li class="nav-item"><button class="nav-link active" v-on:click="makeActive()" aria-current="page">{{ dechet.name }}</button></li>
                     </template>
               <!--li class="nav-item"><button href="#" class="nav-link active" aria-current="page">Verre</button></li>
               <li class="nav-item"><button href="#" class="nav-link">Features</button></li>
@@ -23,11 +23,10 @@
                 </ul>
             </header>
             <main>
-                <ul>
-                    <li v-for="record in commits">
-                        {{record}}
-                    </li>
-                </ul>
+                {{commits}}
+                <p>------------</p>
+                {{dechets}}
+                
             </main>
           
 
@@ -45,7 +44,7 @@
 			Vue.createApp({
 				data() {
 					return {
-						dechets: ["Verre", "Déchets ménagers"],
+						dechets: null,
 						currentBranch: "main",
 						commits: null,
 					};
@@ -63,6 +62,7 @@
 						try {
                             const response = await axios.get(apiURL, config)
                             console.log(response.data)
+                            this.dechets = response.data.facet_groups[0].facets
                             this.commits = response.data
                             // console.log(self.commits[0].html_url);
 						} catch(error) {
