@@ -13,7 +13,7 @@
             <header class="d-flex justify-content-center py-3">
                 <ul class="nav nav-pills">
                     <template v-for="dechet in dechets">
-                        <li class="nav-item"><button class="nav-link active" aria-current="page">{{ dechet }}</button></li>
+                        <li class="nav-item"><button class="nav-link active" v-on:click="makeActive()" aria-current="page">{{ dechet }}</button></li>
                     </template>
               <!--li class="nav-item"><button href="#" class="nav-link active" aria-current="page">Verre</button></li>
               <li class="nav-item"><button href="#" class="nav-link">Features</button></li>
@@ -38,14 +38,14 @@
 		<script src="https://unpkg.com/vue@3"></script>
 		<script>
 			const apiURL =
-				"https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&facet=type_dechet&facet=commune&facet=pole";
+				"https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&rows=10&facet=type_dechet&facet=commune&facet=pole";
 			const config = {
 			};
 
 			Vue.createApp({
 				data() {
 					return {
-						dechets: ["Verre", "dev"],
+						dechets: ["Verre", "Déchets ménagers"],
 						currentBranch: "main",
 						commits: null,
 					};
@@ -61,14 +61,17 @@
 				methods: {
 					fetchDataAsync: async function () {
 						try {
-					 	const response = await axios.get(apiURL, config)
-					 	console.log(response.data)
-						this.commits = response.data
-					    // console.log(self.commits[0].html_url);
+                            const response = await axios.get(apiURL, config)
+                            console.log(response.data)
+                            this.commits = response.data
+                            // console.log(self.commits[0].html_url);
 						} catch(error) {
 					    	console.log(error);
 					  	}
 					},
+                    makeActive: function(){
+                        
+                    },
 					formattedMessage: function (message) {
 						const newline = message.indexOf("\n");
 						return newline > 0 ? message.slice(0, newline) : message;
