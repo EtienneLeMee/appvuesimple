@@ -27,11 +27,6 @@
             </button>
           </li>
         </template>
-        <!--li class="nav-item"><button href="#" class="nav-link active" aria-current="page">Verre</button></li>
-              <li class="nav-item"><button href="#" class="nav-link">Features</button></li>
-              <li class="nav-item"><button href="#" class="nav-link">Pricing</button></li>
-              <li class="nav-item"><button href="#" class="nav-link">FAQs</button></li>
-              <li class="nav-item"><button href="#" class="nav-link">About</button></li-->
       </ul>
     </header>
     <main>
@@ -51,6 +46,27 @@
           </tr>
         </tbody>
       </table>
+
+
+      <p>Plus d'informations sur les adresses : </p>
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="TextCenter">Adresse</th>
+            <th scope="col" class="TextCenter">
+              Commune
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="record in recordsParType">
+            <td class="TextCenter">{{record.fields.adresse}}</td>
+            <td class="TextCenter">{{record.fields.commune}}</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -60,9 +76,9 @@
   <script src="https://unpkg.com/vue@3"></script>
   <script>
     const apiURLDechets =
-      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&rows=10&facet=type_dechet&facet=commune&facet=pole";
+      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&facet=type_dechet&facet=commune&facet=pole";
     const apiURLType =
-      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&rows=10&facet=type_dechet&facet=commune&facet=pole&refine.type_dechet=";
+      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_colonnes-enterrees-nantes-metropole&q=&facet=type_dechet&facet=commune&facet=pole&refine.type_dechet=";
     const config = {};
 
     Vue.createApp({
@@ -71,6 +87,7 @@
           dechets: null,
           currentType: "Tri'Sac", //"Tri%27Sac", //Ordure+m%C3%A9nag%C3%A8re, D%C3%A9chet+recyclable, Verre, Papier-carton
           lieuxParType: null,
+          recordsParType: null,
         };
       },
 
@@ -91,6 +108,7 @@
             );
             console.log(responseType.data);
             this.lieuxParType = responseType.data.facet_groups[1].facets;
+            this.recordsParType = responseType.data.records
             // console.log(self.commits[0].html_url);
           } catch (error) {
             console.log(error);
@@ -103,6 +121,7 @@
             console.log(responseType.data);
             this.dechets = responseDechets.data.facet_groups[0].facets;
             this.lieuxParType = responseType.data.facet_groups[1].facets;
+            this.recordsParType = responseType.data.records
             // console.log(self.commits[0].html_url);
           } catch (error) {
             console.log(error);
