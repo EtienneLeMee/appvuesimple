@@ -1,441 +1,387 @@
 {
-    "nhits": 1479,
+    "nhits": 777,
     "parameters": {
         "dataset": "244400404_colonnes-enterrees-nantes-metropole",
         "rows": 10,
         "start": 0,
-        "facet": ["type_dechet", "commune", "pole"],
+        "facet": [
+            "type_dechet",
+            "commune",
+            "pole"
+        ],
         "format": "json",
         "timezone": "UTC"
     },
-    "records": [{
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "8b48fa69e74ad1a6d91482a868a125fed4baf34e",
-        "fields": {
-            "mot_directeur": "Green",
-            "domanialite": "Domaine privé",
-            "id_colonne": "V4100",
-            "volume_cuve": 4,
-            "volume_fosse": 5,
-            "geo_shape": {
-                "coordinates": [-1.4848800081430127, 47.2906386732144],
-                "type": "Point"
+    "records": [
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "70e1023919a43ab61c47f555353869fe8840a115",
+            "fields": {
+                "mot_directeur": "Rolland",
+                "domanialite": "Domaine public",
+                "volume_fosse": 5,
+                "id_colonne": "TS5258",
+                "volume_cuve": 5,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.6094161837798826,
+                        47.20639243106735
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "19 Rue Romain Rolland",
+                "observation": "Iceberg - Novembre 2011",
+                "fournisseur": "COLLECTAL",
+                "type_dechet": "Tri'Sac",
+                "prehension": "Kinshofer flex",
+                "changement_colonne": "oui",
+                "pole": "Nantes-Ouest",
+                "investisseur": "Nantes Habitat",
+                "commune": "Nantes",
+                "modele": "VILLIGER",
+                "operateur_collecte": "Nantes Métropole",
+                "numero_serie": "1646",
+                "type_avaloir": "Trappe",
+                "gid": "71",
+                "date_mise_en_service": "2021-03-30",
+                "date_mise_en_place": "2011-10-26"
             },
-            "adresse": "2 Allée du Green",
-            "type_dechet": "Verre",
-            "fournisseur": "SULO",
-            "prehension": "Kinshofer",
-            "pole": "Erdre et Loire",
-            "investisseur": "Nexity",
-            "commune": "Carquefou",
-            "operateur_collecte": "Opérateur privé",
-            "numero_serie": "2015-045",
-            "type_avaloir": "Opercule",
-            "gid": "40",
-            "date_mise_en_service": "2015-04-07",
-            "date_mise_en_place": "2015-04-01"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "70e1023919a43ab61c47f555353869fe8840a115",
-        "fields": {
-            "mot_directeur": "Rolland",
-            "domanialite": "Domaine public",
-            "volume_fosse": 5,
-            "id_colonne": "TS5258",
-            "volume_cuve": 5,
-            "geo_shape": {
-                "coordinates": [-1.6094161837798826, 47.20639243106735],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "98c26b6bff438ba9a5efbe85cc6928de0a2be3ae",
+            "fields": {
+                "mot_directeur": "Becker",
+                "domanialite": "Domaine public",
+                "id_colonne": "TS5296",
+                "volume_cuve": 0,
+                "volume_fosse": 0,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.5879993398422012,
+                        47.2317460757806
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "Allée Jacques Becker",
+                "type_dechet": "Tri'Sac",
+                "pole": "Nantes-Ouest",
+                "investisseur": "La Nantaise d'Habitations",
+                "commune": "Nantes",
+                "operateur_collecte": "Nantes Métropole",
+                "gid": "58",
+                "date_mise_en_place": "2011-01-01"
             },
-            "adresse": "19 Rue Romain Rolland",
-            "observation": "Iceberg - Novembre 2011",
-            "fournisseur": "COLLECTAL",
-            "type_dechet": "Tri'Sac",
-            "prehension": "Kinshofer flex",
-            "changement_colonne": "oui",
-            "pole": "Nantes-Ouest",
-            "investisseur": "Nantes Habitat",
-            "commune": "Nantes",
-            "modele": "VILLIGER",
-            "operateur_collecte": "Nantes Métropole",
-            "numero_serie": "1646",
-            "type_avaloir": "Trappe",
-            "gid": "71",
-            "date_mise_en_service": "2021-03-30",
-            "date_mise_en_place": "2011-10-26"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "2713b8f04054020bfcaa928f4a2b8003690acfbb",
-        "fields": {
-            "mot_directeur": "Boulogne",
-            "domanialite": "Domaine public",
-            "volume_fosse": 5,
-            "id_colonne": "OM5189",
-            "volume_cuve": 5,
-            "geo_shape": {
-                "coordinates": [-1.5609132412497873, 47.1840203538905],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "45a44e5791c59d095372b70bd190ae7c38ecef09",
+            "fields": {
+                "commune": "Nantes",
+                "mot_directeur": "Durocher",
+                "id_colonne": "TS5723",
+                "volume_cuve": 0,
+                "volume_fosse": 0,
+                "gid": "69",
+                "geo_shape": {
+                    "coordinates": [
+                        -1.560783502618818,
+                        47.20549690842119
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "Rue Léon Durocher",
+                "type_dechet": "Tri'Sac",
+                "pole": "Nantes-Loire"
             },
-            "adresse": "Allée de Boulogne",
-            "observation": "Menphis - décembre 2010",
-            "fournisseur": "COLLECTAL",
-            "type_dechet": "Ordure ménagère",
-            "prehension": "Kinshofer flex",
-            "changement_colonne": "oui",
-            "pole": "Loire, Sèvre et Vignoble",
-            "investisseur": "Habitat 44",
-            "commune": "Rezé",
-            "modele": "VILLIGER",
-            "operateur_collecte": "Opérateur privé",
-            "type_avaloir": "Trappe",
-            "gid": "3",
-            "date_mise_en_service": "2021-04-06",
-            "date_mise_en_place": "2010-11-01"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "98c26b6bff438ba9a5efbe85cc6928de0a2be3ae",
-        "fields": {
-            "mot_directeur": "Becker",
-            "domanialite": "Domaine public",
-            "id_colonne": "TS5296",
-            "volume_cuve": 0,
-            "volume_fosse": 0,
-            "geo_shape": {
-                "coordinates": [-1.5879993398422012, 47.2317460757806],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "b9ed103c295cb8ef93863a0a030e27939f6bfe67",
+            "fields": {
+                "mot_directeur": "Gabory",
+                "domanialite": "Domaine public",
+                "id_colonne": "TS5287",
+                "volume_cuve": 5,
+                "volume_fosse": 5,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.529040950119273,
+                        47.19459576284482
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "29 Boulevard Emile Gabory",
+                "type_dechet": "Tri'Sac",
+                "prehension": "Kinshofer",
+                "pole": "Loire, Sèvre et Vignoble",
+                "commune": "Nantes",
+                "operateur_collecte": "Nantes Métropole",
+                "gid": "167",
+                "date_mise_en_service": "2012-04-01",
+                "date_mise_en_place": "2012-03-01"
             },
-            "adresse": "Allée Jacques Becker",
-            "type_dechet": "Tri'Sac",
-            "pole": "Nantes-Ouest",
-            "investisseur": "La Nantaise d'Habitations",
-            "commune": "Nantes",
-            "operateur_collecte": "Nantes Métropole",
-            "gid": "58",
-            "date_mise_en_place": "2011-01-01"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "61647d9941775d6baeab2227474e375e65bbfbab",
-        "fields": {
-            "mot_directeur": "Boulogne",
-            "domanialite": "Domaine public",
-            "volume_fosse": 5,
-            "id_colonne": "OM5219",
-            "volume_cuve": 0,
-            "geo_shape": {
-                "coordinates": [-1.5610246334102844, 47.18436536788383],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "df1053abad15d14aacbf4f3a3e2881106c8a696e",
+            "fields": {
+                "mot_directeur": "Bonnevay",
+                "domanialite": "Domaine public",
+                "id_colonne": "TS5139",
+                "volume_cuve": 0,
+                "volume_fosse": 0,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.5413140879945184,
+                        47.19443101719659
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "6 Avenue Laurent Bonnevay",
+                "type_dechet": "Tri'Sac",
+                "pole": "Loire, Sèvre et Vignoble",
+                "investisseur": "Nantes Habitat",
+                "commune": "Nantes",
+                "operateur_collecte": "Nantes Métropole",
+                "gid": "133",
+                "date_mise_en_place": "2010-07-01"
             },
-            "adresse": "Allée de Boulogne",
-            "observation": "Menphis - Décembre 2010",
-            "fournisseur": "COLLECTAL",
-            "type_dechet": "Ordure ménagère",
-            "prehension": "Kinshofer flex",
-            "changement_colonne": "oui",
-            "pole": "Loire, Sèvre et Vignoble",
-            "commune": "Rezé",
-            "modele": "VILLIGER",
-            "operateur_collecte": "Opérateur privé",
-            "type_avaloir": "Trappe",
-            "gid": "4",
-            "date_mise_en_service": "2021-04-06",
-            "date_mise_en_place": "2010-11-01"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "072567ef2f82812281f5fcfd878c76b25eb205d5",
-        "fields": {
-            "mot_directeur": "Angeviniére",
-            "domanialite": "Domaine privé",
-            "id_colonne": "OM5378",
-            "volume_cuve": 5,
-            "volume_fosse": 5,
-            "geo_shape": {
-                "coordinates": [-1.6074993999371345, 47.24322422301287],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "d5b99661d4c8e92f5982fed98710f7ac68ea5538",
+            "fields": {
+                "mot_directeur": "Mimosas",
+                "id_colonne": "TS5525",
+                "volume_cuve": 5,
+                "volume_fosse": 5,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.5890226766533007,
+                        47.239746661932195
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "56 Avenue des Mimosas",
+                "type_dechet": "Tri'Sac",
+                "fournisseur": "ASTECH",
+                "prehension": "Kinshofer",
+                "pole": "Erdre et Cens",
+                "commune": "Orvault",
+                "modele": "MAINE",
+                "type_avaloir": "Trappe",
+                "gid": "112",
+                "date_mise_en_service": "2016-03-14",
+                "date_mise_en_place": "2015-11-01"
             },
-            "adresse": "Avenue de l'Angeviniére",
-            "type_dechet": "Ordure ménagère",
-            "fournisseur": "ASTECH",
-            "prehension": "Kinshofer",
-            "pole": "Loire-Chézine",
-            "investisseur": "Harmonie Habitat",
-            "commune": "Saint-Herblain",
-            "type_avaloir": "Tambour",
-            "gid": "100",
-            "date_mise_en_service": "2014-09-01",
-            "date_mise_en_place": "2014-05-01"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "7d6aa4f001c15f6c0adb44f0ed96c20b027a452a",
-        "fields": {
-            "mot_directeur": "Stone",
-            "domanialite": "Domaine public",
-            "id_colonne": "V4145",
-            "volume_cuve": 4,
-            "volume_fosse": 5,
-            "geo_shape": {
-                "coordinates": [-1.5699596542758816, 47.204012508877845],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "83356357022a635e235881ca583a666bc07b03e6",
+            "fields": {
+                "mot_directeur": "Landes",
+                "domanialite": "Domaine public",
+                "volume_fosse": 5,
+                "id_colonne": "TS5373",
+                "volume_cuve": 5,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.5788483224601704,
+                        47.260056575857156
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "61 Avenue du Bout des Landes",
+                "fournisseur": "SULO",
+                "type_dechet": "Tri'Sac",
+                "prehension": "Kinshofer",
+                "pole": "Erdre et Cens",
+                "investisseur": "Nantes Habitat",
+                "commune": "Nantes",
+                "modele": "ICEBERG",
+                "operateur_collecte": "Nantes Métropole",
+                "numero_serie": "9014",
+                "type_avaloir": "Trappe",
+                "gid": "126",
+                "date_mise_en_service": "2012-06-12",
+                "date_mise_en_place": "2012-05-23"
             },
-            "adresse": "Allée Lucy Stone",
-            "type_dechet": "Verre",
-            "fournisseur": "ASTECH",
-            "prehension": "Kinshofer",
-            "pole": "Nantes-Loire",
-            "investisseur": "SAMOA",
-            "commune": "Nantes",
-            "modele": "MAINE",
-            "operateur_collecte": "Nantes Métropole",
-            "numero_serie": "107960",
-            "type_avaloir": "Tambour",
-            "gid": "66",
-            "date_mise_en_service": "2018-06-30"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "45a44e5791c59d095372b70bd190ae7c38ecef09",
-        "fields": {
-            "commune": "Nantes",
-            "mot_directeur": "Durocher",
-            "id_colonne": "TS5723",
-            "volume_cuve": 0,
-            "volume_fosse": 0,
-            "gid": "69",
-            "geo_shape": {
-                "coordinates": [-1.560783502618818, 47.20549690842119],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "2b873845aa105d570072b564cbb846e523a6d05f",
+            "fields": {
+                "commune": "Nantes",
+                "mot_directeur": "Churchill",
+                "id_colonne": "TS5542",
+                "volume_cuve": 5,
+                "volume_fosse": 5,
+                "gid": "205",
+                "geo_shape": {
+                    "coordinates": [
+                        -1.610314195834934,
+                        47.2098227526625
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "66 Boulevard Winston Churchill",
+                "type_dechet": "Tri'Sac",
+                "prehension": "Kinshofer",
+                "date_mise_en_service": "2016-05-19",
+                "pole": "Nantes-Ouest"
             },
-            "adresse": "Rue Léon Durocher",
-            "type_dechet": "Tri'Sac",
-            "pole": "Nantes-Loire"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "45b3c090f3bd1779ba140df9715d8da7b52e0f99",
-        "fields": {
-            "mot_directeur": "Parc",
-            "domanialite": "Domaine privé",
-            "id_colonne": "OM5375",
-            "volume_cuve": 5,
-            "volume_fosse": 5,
-            "geo_shape": {
-                "coordinates": [-1.6094285644849797, 47.24437691582925],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "c671188a1d3249d2a8bd91bcf0903d2bff2fb725",
+            "fields": {
+                "mot_directeur": "Picasso",
+                "domanialite": "Domaine public",
+                "id_colonne": "TS5538",
+                "volume_cuve": 5,
+                "volume_fosse": 5,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.532780993174592,
+                        47.2169558688374
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "8 Mail Pablo Picasso",
+                "type_dechet": "Tri'Sac",
+                "prehension": "Kinshofer",
+                "pole": "Nantes-Loire",
+                "investisseur": "Nantes Métropole Aménagement",
+                "commune": "Nantes",
+                "type_avaloir": "Tambour",
+                "gid": "221",
+                "date_mise_en_place": "2016-01-01"
             },
-            "adresse": "Allée du Parc",
-            "type_dechet": "Ordure ménagère",
-            "fournisseur": "ASTECH",
-            "prehension": "Kinshofer",
-            "pole": "Loire-Chézine",
-            "investisseur": "Harmonie Habitat",
-            "commune": "Saint-Herblain",
-            "type_avaloir": "Tambour",
-            "gid": "43",
-            "date_mise_en_service": "2014-09-01",
-            "date_mise_en_place": "2014-05-01"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }, {
-        "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
-        "recordid": "f06e8723696d393c63bb08040c36400cb3f30a08",
-        "fields": {
-            "mot_directeur": "Paris",
-            "id_colonne": "DS4023",
-            "volume_cuve": 4,
-            "volume_fosse": 5,
-            "geo_shape": {
-                "coordinates": [-1.6135213853314656, 47.17704790719173],
-                "type": "Point"
+        {
+            "datasetid": "244400404_colonnes-enterrees-nantes-metropole",
+            "recordid": "bec9000136062204b37533b05d1527123a986f67",
+            "fields": {
+                "mot_directeur": "Cohl",
+                "domanialite": "Domaine public",
+                "id_colonne": "TS5040",
+                "volume_cuve": 5,
+                "volume_fosse": 5,
+                "geo_shape": {
+                    "coordinates": [
+                        -1.5853352926523667,
+                        47.23210811425819
+                    ],
+                    "type": "Point"
+                },
+                "adresse": "1 Place Emile Cohl",
+                "type_dechet": "Tri'Sac",
+                "fournisseur": "SULO",
+                "prehension": "Kinshofer",
+                "pole": "Nantes-Ouest",
+                "investisseur": "Nantes Habitat",
+                "commune": "Nantes",
+                "modele": "ICEBERG",
+                "operateur_collecte": "Nantes Métropole",
+                "numero_serie": "5205138/",
+                "type_avaloir": "Tambour",
+                "gid": "245",
+                "date_mise_en_place": "2008-10-23"
             },
-            "adresse": "80 Ruede la Commune de Paris 1871",
-            "observation": "Apporter précision localisation",
-            "type_dechet": "Déchet recyclable",
-            "prehension": "Kinshofer",
-            "pole": "Sud-Ouest",
-            "commune": "Bouguenais",
-            "operateur_collecte": "Nantes Métropole",
-            "gid": "79",
-            "date_mise_en_service": "2020-12-10",
-            "date_mise_en_place": "2020-12-10"
+            "record_timestamp": "2022-12-02T07:00:47.684Z"
+        }
+    ],
+    "facet_groups": [
+        {
+            "name": "type_dechet",
+            "facets": [
+                {
+                    "name": "Tri'Sac",
+                    "count": 777,
+                    "state": "refined",
+                    "path": "Tri'Sac"
+                }
+            ]
         },
-        "record_timestamp": "2022-12-02T07:00:47.684Z"
-    }],
-    "facet_groups": [{
-        "name": "type_dechet",
-        "facets": [{
-            "name": "Tri'Sac",
-            "count": 777,
-            "state": "displayed",
-            "path": "Tri'Sac"
-        }, {
-            "name": "Ordure ménagère",
-            "count": 286,
-            "state": "displayed",
-            "path": "Ordure ménagère"
-        }, {
-            "name": "Déchet recyclable",
-            "count": 213,
-            "state": "displayed",
-            "path": "Déchet recyclable"
-        }, {
-            "name": "Verre",
-            "count": 194,
-            "state": "displayed",
-            "path": "Verre"
-        }, {
-            "name": "Papier-carton",
-            "count": 8,
-            "state": "displayed",
-            "path": "Papier-carton"
-        }]
-    }, {
-        "name": "commune",
-        "facets": [{
-            "name": "Nantes",
-            "count": 889,
-            "state": "displayed",
-            "path": "Nantes"
-        }, {
-            "name": "Saint-Herblain",
-            "count": 173,
-            "state": "displayed",
-            "path": "Saint-Herblain"
-        }, {
-            "name": "Rezé",
-            "count": 124,
-            "state": "displayed",
-            "path": "Rezé"
-        }, {
-            "name": "Carquefou",
-            "count": 60,
-            "state": "displayed",
-            "path": "Carquefou"
-        }, {
-            "name": "Vertou",
-            "count": 51,
-            "state": "displayed",
-            "path": "Vertou"
-        }, {
-            "name": "Saint-Sébastien-sur-Loire",
-            "count": 39,
-            "state": "displayed",
-            "path": "Saint-Sébastien-sur-Loire"
-        }, {
-            "name": "Orvault",
-            "count": 29,
-            "state": "displayed",
-            "path": "Orvault"
-        }, {
-            "name": "Sainte-Luce-sur-Loire",
-            "count": 28,
-            "state": "displayed",
-            "path": "Sainte-Luce-sur-Loire"
-        }, {
-            "name": "Bouguenais",
-            "count": 27,
-            "state": "displayed",
-            "path": "Bouguenais"
-        }, {
-            "name": "Sautron",
-            "count": 16,
-            "state": "displayed",
-            "path": "Sautron"
-        }, {
-            "name": "Thouaré-sur-Loire",
-            "count": 10,
-            "state": "displayed",
-            "path": "Thouaré-sur-Loire"
-        }, {
-            "name": "Indre",
-            "count": 9,
-            "state": "displayed",
-            "path": "Indre"
-        }, {
-            "name": "La Chapelle-sur-Erdre",
-            "count": 8,
-            "state": "displayed",
-            "path": "La Chapelle-sur-Erdre"
-        }, {
-            "name": "Les Sorinières",
-            "count": 6,
-            "state": "displayed",
-            "path": "Les Sorinières"
-        }, {
-            "name": "Basse-Goulaine",
-            "count": 5,
-            "state": "displayed",
-            "path": "Basse-Goulaine"
-        }, {
-            "name": "Bouaye",
-            "count": 2,
-            "state": "displayed",
-            "path": "Bouaye"
-        }, {
-            "name": "Mauves-sur-Loire",
-            "count": 1,
-            "state": "displayed",
-            "path": "Mauves-sur-Loire"
-        }, {
-            "name": "Saint-Jean-de-Boiseau",
-            "count": 1,
-            "state": "displayed",
-            "path": "Saint-Jean-de-Boiseau"
-        }, {
-            "name": "Saint-Léger-les-Vignes",
-            "count": 1,
-            "state": "displayed",
-            "path": "Saint-Léger-les-Vignes"
-        }]
-    }, {
-        "name": "pole",
-        "facets": [{
-            "name": "Loire, Sèvre et Vignoble",
-            "count": 316,
-            "state": "displayed",
-            "path": "Loire, Sèvre et Vignoble"
-        }, {
-            "name": "Erdre et Loire",
-            "count": 294,
-            "state": "displayed",
-            "path": "Erdre et Loire"
-        }, {
-            "name": "Nantes-Ouest",
-            "count": 253,
-            "state": "displayed",
-            "path": "Nantes-Ouest"
-        }, {
-            "name": "Nantes-Loire",
-            "count": 238,
-            "state": "displayed",
-            "path": "Nantes-Loire"
-        }, {
-            "name": "Loire-Chézine",
-            "count": 182,
-            "state": "displayed",
-            "path": "Loire-Chézine"
-        }, {
-            "name": "Erdre et Cens",
-            "count": 165,
-            "state": "displayed",
-            "path": "Erdre et Cens"
-        }, {
-            "name": "Sud-Ouest",
-            "count": 31,
-            "state": "displayed",
-            "path": "Sud-Ouest"
-        }]
-    }]
+        {
+            "name": "commune",
+            "facets": [
+                {
+                    "name": "Nantes",
+                    "count": 769,
+                    "state": "displayed",
+                    "path": "Nantes"
+                },
+                {
+                    "name": "Orvault",
+                    "count": 3,
+                    "state": "displayed",
+                    "path": "Orvault"
+                },
+                {
+                    "name": "Saint-Herblain",
+                    "count": 3,
+                    "state": "displayed",
+                    "path": "Saint-Herblain"
+                },
+                {
+                    "name": "Saint-Sébastien-sur-Loire",
+                    "count": 2,
+                    "state": "displayed",
+                    "path": "Saint-Sébastien-sur-Loire"
+                }
+            ]
+        },
+        {
+            "name": "pole",
+            "facets": [
+                {
+                    "name": "Nantes-Ouest",
+                    "count": 235,
+                    "state": "displayed",
+                    "path": "Nantes-Ouest"
+                },
+                {
+                    "name": "Nantes-Loire",
+                    "count": 181,
+                    "state": "displayed",
+                    "path": "Nantes-Loire"
+                },
+                {
+                    "name": "Erdre et Loire",
+                    "count": 163,
+                    "state": "displayed",
+                    "path": "Erdre et Loire"
+                },
+                {
+                    "name": "Erdre et Cens",
+                    "count": 105,
+                    "state": "displayed",
+                    "path": "Erdre et Cens"
+                },
+                {
+                    "name": "Loire, Sèvre et Vignoble",
+                    "count": 90,
+                    "state": "displayed",
+                    "path": "Loire, Sèvre et Vignoble"
+                },
+                {
+                    "name": "Loire-Chézine",
+                    "count": 3,
+                    "state": "displayed",
+                    "path": "Loire-Chézine"
+                }
+            ]
+        }
+    ]
 }
